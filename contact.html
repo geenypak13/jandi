@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>맞춤 앱·홈페이지 견적 의뢰 — J&I (JandI) 양평</title>
+<meta name="description" content="“이런 거 만들 수 있어요?” 막연해도 괜찮습니다. 양평 J&I(JandI)에 견적을 의뢰하세요. 화상으로 전국 어디든 상담. Tel. 010-9061-7289">
+<meta property="og:title" content="맞춤 앱·홈페이지 견적 의뢰 — J&I (JandI)">
+<link rel="canonical" href="https://jandi.kr/contact.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:var(--mustard)">
+
+<div class="mobile-bar">
+  <a class="logo" href="index.html">J<span class="amp">&amp;</span>I</a>
+  <button class="burger" aria-label="메뉴 열기" onclick="toggleNav()">☰</button>
+</div>
+<div class="scrim" id="scrim" onclick="toggleNav()"></div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html"><span class="logo">J<span class="amp">&amp;</span>I</span><span class="tag">양평의 1인 AI 회사 · JandI</span></a>
+    <nav class="nav">
+      <a href="index.html"    style="--c:var(--deepgreen)">홈</a>
+      <a href="about.html"    style="--c:var(--coral)">About</a>
+      <a href="cases.html"    style="--c:var(--magenta)">사례</a>
+      <a href="services.html" style="--c:var(--purple)">서비스</a>
+      <a href="faq.html"      style="--c:var(--turquoise)">FAQ</a>
+      <a href="contact.html"  class="active" style="--c:var(--mustard)">연락</a>
+    </nav>
+    <div class="side-foot">
+      <div class="sns"><a href="https://instagram.com/jey_oreo" target="_blank" rel="noopener">Instagram</a></div>
+      <a class="btn-quote" href="#form">견적 의뢰하기 →</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="wrap">
+      <p class="eyebrow">연락</p>
+      <h1 class="page-title">일단 물어보세요.</h1>
+      <p class="lead">“이런 거 만들 수 있어요?” 막연해도 괜찮습니다. 정리는 같이 합니다.</p>
+
+      <!-- Netlify Forms 견적 폼 -->
+      <form id="form" class="formcard" name="quote" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="quote">
+        <p style="display:none"><label>채우지 마세요: <input name="bot-field"></label></p>
+
+        <div class="row2">
+          <div class="field">
+            <label for="name">성함</label>
+            <input id="name" name="성함" type="text" placeholder="홍길동" required>
+          </div>
+          <div class="field">
+            <label for="store">가게 이름</label>
+            <input id="store" name="가게이름" type="text" placeholder="○○식당">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="industry">업종</label>
+          <input id="industry" name="업종" type="text" placeholder="예: 식당 / 카페 / 케이터링 / 돌봄">
+        </div>
+
+        <div class="field">
+          <label for="need">어떤 게 불편하신가요?</label>
+          <textarea id="need" name="불편한점" placeholder="예: 매일 직원 출근 시간을 엑셀로 일일이 적어요. 자동으로 정리되면 좋겠어요." required></textarea>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="contact">연락처 (전화 또는 이메일)</label>
+            <input id="contact" name="연락처" type="text" placeholder="010-0000-0000 또는 이메일" required>
+          </div>
+          <div class="field">
+            <label for="budget">예산대 (선택)</label>
+            <select id="budget" name="예산대">
+              <option value="">아직 모르겠어요</option>
+              <option>100만원 이하</option>
+              <option>100~300만원</option>
+              <option>300~500만원</option>
+              <option>500만원 이상</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="submit" type="submit">견적 의뢰 보내기 →</button>
+      </form>
+
+      <p class="contact-quick">
+        · 급하시면 전화: <a href="tel:01090617289">010-9061-7289</a><br>
+        · 양평 기반, 화상으로 전국 어디든 상담합니다.<br>
+        · 이메일: <a href="mailto:hello@jandi.kr">hello@jandi.kr</a>
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div class="fmenu"><a href="about.html">About</a><a href="privacy.html">개인정보처리방침</a><a href="contact.html">견적 문의</a></div>
+      <div class="info"><b>제이앤아이 (J&amp;I Co., Ltd. / JandI)</b> | 대표: 박제이<br>사업자등록번호: (등록 후 기재) | 주소: 경기도 양평군<br>Tel. 010-9061-7289 | 이메일: <a href="mailto:hello@jandi.kr">hello@jandi.kr</a></div>
+      <div class="copy">Copyright © 2026 J&amp;I (JandI). All rights reserved.</div>
+    </footer>
+  </main>
+</div>
+<script>function toggleNav(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('scrim').classList.toggle('show');}</script>
+</body>
+</html>
