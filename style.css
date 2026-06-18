@@ -109,8 +109,8 @@ img{max-width:100%;display:block}
 .eyebrow::before{content:"";width:22px;height:4px;border-radius:3px;background:var(--accent)}
 
 h1.page-title{
-  font-size:clamp(30px,4.4vw,46px);font-weight:800;line-height:1.18;
-  letter-spacing:-.02em;color:var(--ink);
+  font-size:clamp(30px,4.4vw,46px);font-weight:900;line-height:1.16;
+  letter-spacing:-.03em;color:var(--ink);
 }
 h2.sec{
   font-size:clamp(21px,2.6vw,27px);font-weight:800;color:var(--ink);
@@ -124,15 +124,21 @@ h2.sec::before{content:"";width:5px;height:26px;border-radius:3px;background:var
 p{margin:0 0 14px}
 strong{color:var(--ink);font-weight:700}
 
-/* ============ 히어로 ============ */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+/* ============ 히어로 (좌우 2단, 그림 없음) ============ */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:10px}
 .hero-copy h1{
-  font-size:clamp(32px,4.8vw,52px);font-weight:800;line-height:1.16;
+  font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.18;
   letter-spacing:-.025em;color:var(--ink);
 }
+.hero-copy h1 .hl{color:var(--coral)}
 .hero-copy .sub{
-  font-size:19px;color:var(--charcoal);font-weight:600;margin-top:18px;line-height:1.6;
+  font-size:18px;color:var(--charcoal);font-weight:600;margin-top:20px;line-height:1.6;
 }
+.hero-def{
+  border-left:4px solid var(--accent);padding-left:24px;
+  font-size:16px;line-height:1.85;color:var(--charcoal);
+}
+.hero-def .alias{font-weight:700;color:var(--ink)}
 .hero-art{
   border-radius:20px;overflow:hidden;
   box-shadow:0 24px 60px rgba(20,52,43,.18);
