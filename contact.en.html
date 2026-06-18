@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote — Custom Apps & Websites | J&I (JandI), Yangpyeong</title>
+<meta name="description" content="“Can you build something like this?” It's fine if it's still vague. Request a quote from J&I (JandI) in Yangpyeong, Korea. Remote consultation anywhere. Tel. +82-10-9061-7289">
+<meta property="og:title" content="Request a Quote — J&I (JandI)">
+<link rel="canonical" href="https://jandi.kr/contact.en.html">
+<link rel="alternate" hreflang="ko" href="https://jandi.kr/contact.html">
+<link rel="alternate" hreflang="en" href="https://jandi.kr/contact.en.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="--accent:var(--mustard)">
+
+<div class="mobile-bar">
+  <a class="logo" href="index.en.html">J<span class="amp">&amp;</span>I</a>
+  <button class="burger" aria-label="Open menu" onclick="toggleNav()">☰</button>
+</div>
+<div class="scrim" id="scrim" onclick="toggleNav()"></div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.en.html"><span class="logo">J<span class="amp">&amp;</span>I</span><span class="tag">A one-person AI company in Yangpyeong · JandI</span></a>
+    <nav class="nav">
+      <a href="index.en.html"    style="--c:var(--deepgreen)">Home</a>
+      <a href="about.en.html"    style="--c:var(--coral)">About</a>
+      <a href="cases.en.html"    style="--c:var(--magenta)">Cases</a>
+      <a href="services.en.html" style="--c:var(--purple)">Services</a>
+      <a href="faq.en.html"      style="--c:var(--turquoise)">FAQ</a>
+      <a href="contact.en.html"  class="active" style="--c:var(--mustard)">Contact</a>
+    </nav>
+    <div class="side-foot">
+      <div class="lang">
+        <a href="contact.html">한국어</a>
+        <a href="contact.en.html" class="active" aria-current="page">English</a>
+      </div>
+      <div class="sns"><a href="https://instagram.com/jey_oreo" target="_blank" rel="noopener">Instagram</a></div>
+      <a class="btn-quote" href="#form">Request a quote →</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1 class="page-title">Just ask.</h1>
+      <p class="lead">“Can you build something like this?” It’s fine if it’s still vague — we sort it out together.</p>
+
+      <!-- Netlify Forms quote form (English) -->
+      <form id="form" class="formcard" name="quote-en" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field" action="/thanks.en.html">
+        <input type="hidden" name="form-name" value="quote-en">
+        <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+
+        <div class="row2">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="Name" type="text" placeholder="Jane Doe" required>
+          </div>
+          <div class="field">
+            <label for="store">Business name</label>
+            <input id="store" name="Business" type="text" placeholder="Your shop / company">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="industry">Industry</label>
+          <input id="industry" name="Industry" type="text" placeholder="e.g. restaurant / café / catering / care">
+        </div>
+
+        <div class="field">
+          <label for="need">What’s the pain point?</label>
+          <textarea id="need" name="Needs" placeholder="e.g. Every day I log each employee's clock-in time by hand in Excel. I'd love for it to be tallied automatically." required></textarea>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="contact">Contact (phone or email)</label>
+            <input id="contact" name="Contact" type="text" placeholder="phone number or email" required>
+          </div>
+          <div class="field">
+            <label for="budget">Budget (optional)</label>
+            <select id="budget" name="Budget">
+              <option value="">Not sure yet</option>
+              <option>Under ₩1M</option>
+              <option>₩1–3M</option>
+              <option>₩3–5M</option>
+              <option>Over ₩5M</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="submit" type="submit">Send request →</button>
+      </form>
+
+      <p class="contact-quick">
+        · In a hurry? Call: <a href="tel:+821090617289">+82-10-9061-7289</a><br>
+        · Based in Yangpyeong, Korea — remote consultation anywhere.<br>
+        · Email: <a href="mailto:hello@jandi.kr">hello@jandi.kr</a>
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div class="fmenu"><a href="about.en.html">About</a><a href="privacy.en.html">Privacy Policy</a><a href="contact.en.html">Get a Quote</a></div>
+      <div class="info"><b>J&amp;I Co., Ltd. (JandI)</b> | Founder: Jey Park<br>Business reg. no.: (to be added) | Address: Yangpyeong, Gyeonggi-do, Korea<br>Tel. +82-10-9061-7289 | Email: <a href="mailto:hello@jandi.kr">hello@jandi.kr</a></div>
+      <div class="copy">Copyright © 2026 J&amp;I (JandI). All rights reserved.</div>
+    </footer>
+  </main>
+</div>
+<script>function toggleNav(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('scrim').classList.toggle('show');}</script>
+</body>
+</html>
