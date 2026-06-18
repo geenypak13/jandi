@@ -125,14 +125,14 @@ p{margin:0 0 14px}
 strong{color:var(--ink);font-weight:700}
 
 /* ============ 히어로 (좌우 2단, 그림 없음) ============ */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:10px}
-.hero-copy h1{
+.hero{display:block;padding-top:10px}
+.hero h1{
   font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.18;
   letter-spacing:-.025em;color:var(--ink);
 }
-.hero-copy h1 .hl{color:var(--coral)}
-.hero-copy .sub{
-  font-size:18px;color:var(--charcoal);font-weight:600;margin-top:20px;line-height:1.6;
+.hero h1 .hl{color:var(--coral)}
+.hero .sub{
+  font-size:18px;font-weight:700;margin-top:20px;line-height:1.6;
 }
 .hero-def{
   border-left:4px solid var(--accent);padding-left:24px;
@@ -242,7 +242,6 @@ strong{color:var(--ink);font-weight:700}
 
 /* ============ 푸터 ============ */
 .footer{
-  margin-left:var(--sidebar);
   border-top:1px solid var(--line);background:var(--paper);
   padding:38px 56px 46px;
 }
@@ -281,3 +280,26 @@ strong{color:var(--ink);font-weight:700}
   .row2{grid-template-columns:1fr}
 }
 @media(min-width:881px){.mobile-bar{display:none}}
+
+/* ===== 다국어 번역 버튼 ===== */
+.lang{display:flex;gap:6px;margin-bottom:14px}
+.lang button{
+  flex:1;padding:7px 0;font-size:12px;font-weight:700;
+  border:1px solid #e3e3e3;background:#fff;color:var(--ink);
+  border-radius:7px;cursor:pointer;font-family:inherit;transition:.15s;
+}
+.lang button:hover{border-color:var(--deepgreen)}
+.lang .lang-ko{color:var(--coral);border-color:var(--coral)}
+/* 구글 번역 기본 UI 숨김 (커스텀 버튼만 노출) */
+.skiptranslate{display:none !important}
+body{top:0 !important}
+#goog-gt-tt,.goog-te-balloon-frame{display:none !important}
+font font{background:transparent !important;box-shadow:none !important}
+/* 언어 스위처 링크형(정식 페이지 이동용) */
+.lang a{
+  flex:1;text-align:center;padding:7px 0;font-size:12px;font-weight:700;
+  border:1px solid #e3e3e3;background:#fff;color:var(--ink);
+  border-radius:7px;text-decoration:none;
+}
+.lang a:hover{border-color:var(--deepgreen)}
+.lang a.active{border-color:var(--deepgreen);background:var(--deepgreen);color:#fff}
