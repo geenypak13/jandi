@@ -53,17 +53,17 @@ img,video{max-width:100%;display:block}
 .side-cta:hover{background:var(--green);color:var(--white)}
 
 /* ───── 본문 ───── */
-.main{margin-left:var(--sidebar);padding:72px 7vw 120px;max-width:1180px}
+.main{margin-left:var(--sidebar);padding:64px 56px 100px;max-width:960px}
 .eyebrow{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;
   letter-spacing:.14em;color:var(--magenta);text-transform:uppercase;margin-bottom:36px}
 .eyebrow::before{content:"";width:26px;height:3px;background:var(--magenta)}
 
 .app-head{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
-.app-icon{width:76px;height:76px;flex:0 0 76px;border-radius:18px;background:var(--chuldak);
-  color:#fff;display:grid;place-items:center;font-size:36px;font-weight:800;letter-spacing:-.02em}
-.app-title{font-size:clamp(38px,5.4vw,62px);font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.app-icon{width:58px;height:58px;flex:0 0 58px;border-radius:14px;background:var(--chuldak);
+  color:#fff;display:grid;place-items:center;font-size:27px;font-weight:800;letter-spacing:-.02em}
+.app-title{font-size:clamp(30px,4vw,42px);font-weight:800;letter-spacing:-.035em;line-height:1.1}
 .app-title small{font-size:.34em;font-weight:600;color:var(--gray);letter-spacing:0;margin-left:12px}
-.app-sub{font-size:clamp(17px,2vw,21px);color:#31463F;margin-top:12px;max-width:34ch}
+.app-sub{font-size:clamp(15px,1.6vw,17px);color:#31463F;margin-top:12px;max-width:34ch}
 .badge{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:6px 14px 6px 12px;
   border-radius:100px;background:#FEF2F2;color:var(--chuldak);font-size:13px;font-weight:700}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--chuldak);animation:pulse 2.2s infinite}
@@ -80,35 +80,35 @@ img,video{max-width:100%;display:block}
 .link-ghost:hover{background:var(--green);color:#fff}
 .link-ghost:hover span{color:rgba(255,255,255,.7)}
 
-.banner{margin-top:44px;max-width:420px}
+.banner{margin-top:36px;max-width:320px}
 .banner img{border-radius:6px}
 .banner figcaption{margin-top:10px;font-size:12.5px;color:var(--gray)}
 
-.block{margin-top:72px}
+.block{margin-top:60px}
 .block-title{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--gray);
   padding-left:14px;border-left:3px solid var(--chuldak);margin-bottom:32px}
-.lead{font-size:clamp(19px,2.2vw,25px);font-weight:600;line-height:1.65;max-width:30ch;letter-spacing:-.02em}
+.lead{font-size:clamp(17px,1.9vw,21px);font-weight:600;line-height:1.65;max-width:30ch;letter-spacing:-.02em}
 .lead + .lead{margin-top:14px;font-weight:400;color:#3D524B;font-size:clamp(16px,1.7vw,19px)}
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{border-top:3px solid var(--chuldak);padding-top:22px}
-.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.card h3{font-size:18px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
 .card p{font-size:15px;color:#3D524B;line-height:1.75}
 .card em{font-style:normal;font-weight:700;color:var(--chuldak)}
 
 /* 데모 영상 */
 .demo{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
-.phone{flex:0 0 236px;padding:9px;background:var(--green);border-radius:30px}
-.phone video{border-radius:22px;width:100%;display:block;aspect-ratio:640/1386;object-fit:cover;background:var(--green)}
+.phone{flex:0 0 190px;padding:8px;background:var(--green);border-radius:26px}
+.phone video{border-radius:22px;width:100%;display:block;aspect-ratio:640/1386;object-fit:contain;background:var(--green)}
 .demo-txt{flex:1;min-width:260px}
-.demo-txt h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.35}
+.demo-txt h3{font-size:clamp(19px,2.1vw,24px);font-weight:800;letter-spacing:-.03em;line-height:1.35}
 .demo-txt p{margin-top:14px;font-size:16px;color:#3D524B;max-width:36ch}
 .demo-txt a{display:inline-block;margin-top:22px;font-size:14.5px;font-weight:700;
   border-bottom:2px solid var(--chuldak);padding-bottom:3px}
 
-.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .shot{margin:0}
-.shot .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:#fff}
+.shot .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#fff}
 .shot .frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .shot figcaption{margin-top:12px;font-size:13px;color:var(--gray);font-weight:500}
 
@@ -121,8 +121,8 @@ img,video{max-width:100%;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .chip{padding:5px 12px;border:1px solid var(--line);border-radius:100px;font-size:12.5px;color:var(--gray);font-weight:600}
 
-.cta{margin-top:88px;background:var(--green);color:#fff;padding:clamp(44px,6vw,72px);border-radius:4px}
-.cta h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.cta{margin-top:76px;background:var(--green);color:#fff;padding:clamp(44px,6vw,72px);border-radius:4px}
+.cta h2{font-size:clamp(23px,2.8vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
 .cta p{margin-top:18px;font-size:17px;color:rgba(255,255,255,.82);max-width:44ch}
 .cta a{display:inline-block;margin-top:32px;padding:16px 34px;background:#fff;color:var(--green);
   border-radius:3px;font-size:15px;font-weight:800;transition:.18s}
@@ -132,7 +132,6 @@ img,video{max-width:100%;display:block}
 @media (max-width:1080px){
   .cards{grid-template-columns:1fr}
   .card{border-top-width:2px}
-  .shots{grid-template-columns:repeat(2,1fr)}
   .feats{grid-template-columns:1fr}
 }
 @media (max-width:880px){
@@ -141,7 +140,8 @@ img,video{max-width:100%;display:block}
   .nav{margin-top:20px;flex-direction:row;flex-wrap:wrap;gap:8px 20px}
   .nav a{padding:4px 0}
   .side-cta{margin-top:20px}
-  .main{margin-left:0;padding:44px 20px 80px}
+  .main{margin-left:0;padding:40px 20px 72px}
+  .shots{grid-template-columns:1fr}
   .block{margin-top:68px}
   .app-icon{width:60px;height:60px;flex-basis:60px;font-size:28px;border-radius:14px}
   .links{flex-direction:column}
