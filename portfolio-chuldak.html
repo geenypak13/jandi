@@ -80,11 +80,11 @@ img,video{max-width:100%;display:block}
 .link-ghost:hover{background:var(--green);color:#fff}
 .link-ghost:hover span{color:rgba(255,255,255,.7)}
 
-.banner{margin-top:44px;max-width:640px}
+.banner{margin-top:44px;max-width:420px}
 .banner img{border-radius:6px}
 .banner figcaption{margin-top:10px;font-size:12.5px;color:var(--gray)}
 
-.block{margin-top:96px}
+.block{margin-top:72px}
 .block-title{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--gray);
   padding-left:14px;border-left:3px solid var(--chuldak);margin-bottom:32px}
 .lead{font-size:clamp(19px,2.2vw,25px);font-weight:600;line-height:1.65;max-width:30ch;letter-spacing:-.02em}
@@ -98,8 +98,8 @@ img,video{max-width:100%;display:block}
 
 /* 데모 영상 */
 .demo{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
-.phone{flex:0 0 292px;padding:11px;background:var(--green);border-radius:34px}
-.phone video{border-radius:24px;width:100%;background:#000}
+.phone{flex:0 0 236px;padding:9px;background:var(--green);border-radius:30px}
+.phone video{border-radius:22px;width:100%;display:block;aspect-ratio:640/1386;object-fit:cover;background:var(--green)}
 .demo-txt{flex:1;min-width:260px}
 .demo-txt h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.35}
 .demo-txt p{margin-top:14px;font-size:16px;color:#3D524B;max-width:36ch}
@@ -107,7 +107,9 @@ img,video{max-width:100%;display:block}
   border-bottom:2px solid var(--chuldak);padding-bottom:3px}
 
 .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.shot img{border:1px solid var(--line);border-radius:8px;width:100%}
+.shot{margin:0}
+.shot .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:3/4;background:#fff}
+.shot .frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .shot figcaption{margin-top:12px;font-size:13px;color:var(--gray);font-weight:500}
 
 .feats{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;border-top:1px solid var(--line)}
@@ -119,7 +121,7 @@ img,video{max-width:100%;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .chip{padding:5px 12px;border:1px solid var(--line);border-radius:100px;font-size:12.5px;color:var(--gray);font-weight:600}
 
-.cta{margin-top:110px;background:var(--green);color:#fff;padding:clamp(44px,6vw,72px);border-radius:4px}
+.cta{margin-top:88px;background:var(--green);color:#fff;padding:clamp(44px,6vw,72px);border-radius:4px}
 .cta h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
 .cta p{margin-top:18px;font-size:17px;color:rgba(255,255,255,.82);max-width:44ch}
 .cta a{display:inline-block;margin-top:32px;padding:16px 34px;background:#fff;color:var(--green);
@@ -243,19 +245,19 @@ img,video{max-width:100%;display:block}
     <h2 class="block-title">화면</h2>
     <div class="shots">
       <figure class="shot">
-        <img src="images/chuldak-01.png" alt="출딱 관리자 홈 화면 — 오늘 출퇴근 등록과 보건증 정상 표시" width="720" height="1418" loading="lazy">
+        <div class="frame"><img src="images/chuldak-01.png" alt="출딱 관리자 홈 화면 — 오늘 출퇴근 등록과 보건증 정상 표시" width="720" height="1418" loading="lazy"></div>
         <figcaption>관리자 홈 · 출퇴근 등록</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/chuldak-02.png" alt="출딱 오늘 출근 현황 화면 — 직원별 출근 상태 목록" width="720" height="1418" loading="lazy">
+        <div class="frame"><img src="images/chuldak-02.png" alt="출딱 오늘 출근 현황 화면 — 직원별 출근 상태 목록" width="720" height="1418" loading="lazy"></div>
         <figcaption>오늘 출근 현황 · 직원별</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/chuldak-03.png" alt="출딱 보건증 관리 화면 — 직원별 만료일과 만료 임박 경고" width="720" height="1418" loading="lazy">
+        <div class="frame"><img src="images/chuldak-03.png" alt="출딱 보건증 관리 화면 — 직원별 만료일과 만료 임박 경고" width="720" height="1418" loading="lazy"></div>
         <figcaption>보건증 관리 · 만료 임박 경고</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/chuldak-04.png" alt="출딱 세무사·노무사 즉시 발송 화면 — 엑셀·PDF 이메일 전송" width="720" height="1418" loading="lazy">
+        <div class="frame"><img src="images/chuldak-04.png" alt="출딱 세무사·노무사 즉시 발송 화면 — 엑셀·PDF 이메일 전송" width="720" height="1418" loading="lazy"></div>
         <figcaption>세무사·노무사 즉시 발송</figcaption>
       </figure>
     </div>
