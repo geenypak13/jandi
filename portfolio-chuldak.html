@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>출딱 — 직원 출퇴근·급여관리 앱 | 제이앤아이 사례</title>
+<meta name="description" content="경기도 양평 제이앤아이(J&amp;I)가 직접 만들어 운영 중인 직원 출퇴근·급여관리 앱 '출딱'. 주휴수당 자동 계산, 보건증 만료 알림, 세무사 자료 원클릭 전송. Google Play 정식 출시.">
+<link rel="canonical" href="https://jandi.kr/portfolio-chuldak.html">
+<meta property="og:title" content="출딱 — 직원 출퇴근·급여관리 앱 | 제이앤아이 사례">
+<meta property="og:description" content="출퇴근을 기록하면 급여가 자동으로 계산되는 사장님용 앱. 제이앤아이가 직접 만들어 운영 중입니다.">
+<meta property="og:image" content="https://jandi.kr/images/chuldak-banner.png">
+
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+
+<style>
+:root{
+  --white:#FFFFFF;
+  --green:#14342B;
+  --coral:#F0573D;
+  --magenta:#D63384;
+  --purple:#7A3FA0;
+  --turquoise:#1FA89A;
+  --mustard:#E8B53D;
+  --chuldak:#DC2626;
+  --gray:#6B7A74;
+  --line:#E6EAE8;
+  --sidebar:264px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  background:var(--white);color:var(--green);line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--chuldak);outline-offset:3px}
+
+/* ───── 사이드바 ───── */
+.sidebar{position:fixed;top:0;left:0;width:var(--sidebar);height:100vh;padding:40px 32px;
+  display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--white)}
+.logo{font-size:26px;font-weight:800;letter-spacing:.06em}
+.nav{margin-top:56px;display:flex;flex-direction:column;gap:2px;flex:1}
+.nav a{display:flex;align-items:center;gap:12px;padding:9px 0;font-size:15px;font-weight:500;color:var(--gray);transition:color .18s}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--green)}
+.nav a[aria-current="page"]{font-weight:700}
+.nav .bar{width:3px;height:15px;border-radius:1px;background:currentColor;flex:0 0 3px}
+.c-home .bar{color:var(--green)} .c-about .bar{color:var(--coral)}
+.c-case .bar{color:var(--magenta)} .c-service .bar{color:var(--purple)}
+.c-faq .bar{color:var(--turquoise)} .c-contact .bar{color:var(--mustard)}
+.side-cta{display:block;text-align:center;padding:13px;border:1.5px solid var(--green);
+  border-radius:2px;font-size:14px;font-weight:700;transition:.18s}
+.side-cta:hover{background:var(--green);color:var(--white)}
+
+/* ───── 본문 ───── */
+.main{margin-left:var(--sidebar);padding:72px 7vw 120px;max-width:1180px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;
+  letter-spacing:.14em;color:var(--magenta);text-transform:uppercase;margin-bottom:36px}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--magenta)}
+
+.app-head{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.app-icon{width:76px;height:76px;flex:0 0 76px;border-radius:18px;background:var(--chuldak);
+  color:#fff;display:grid;place-items:center;font-size:36px;font-weight:800;letter-spacing:-.02em}
+.app-title{font-size:clamp(38px,5.4vw,62px);font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.app-title small{font-size:.34em;font-weight:600;color:var(--gray);letter-spacing:0;margin-left:12px}
+.app-sub{font-size:clamp(17px,2vw,21px);color:#31463F;margin-top:12px;max-width:34ch}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:6px 14px 6px 12px;
+  border-radius:100px;background:#FEF2F2;color:var(--chuldak);font-size:13px;font-weight:700}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--chuldak);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
+.link{display:flex;flex-direction:column;gap:2px;padding:15px 26px;border-radius:3px;
+  border:1.5px solid var(--green);font-size:15px;font-weight:700;transition:.18s}
+.link span{font-size:12px;font-weight:500;color:var(--gray)}
+.link:hover{transform:translateY(-2px)}
+.link-primary{background:var(--chuldak);border-color:var(--chuldak);color:#fff}
+.link-primary span{color:rgba(255,255,255,.78)}
+.link-primary:hover{background:#B91C1C;border-color:#B91C1C}
+.link-ghost:hover{background:var(--green);color:#fff}
+.link-ghost:hover span{color:rgba(255,255,255,.7)}
+
+.banner{margin-top:44px;max-width:640px}
+.banner img{border-radius:6px}
+.banner figcaption{margin-top:10px;font-size:12.5px;color:var(--gray)}
+
+.block{margin-top:96px}
+.block-title{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--gray);
+  padding-left:14px;border-left:3px solid var(--chuldak);margin-bottom:32px}
+.lead{font-size:clamp(19px,2.2vw,25px);font-weight:600;line-height:1.65;max-width:30ch;letter-spacing:-.02em}
+.lead + .lead{margin-top:14px;font-weight:400;color:#3D524B;font-size:clamp(16px,1.7vw,19px)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{border-top:3px solid var(--chuldak);padding-top:22px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+.card p{font-size:15px;color:#3D524B;line-height:1.75}
+.card em{font-style:normal;font-weight:700;color:var(--chuldak)}
+
+/* 데모 영상 */
+.demo{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
+.phone{flex:0 0 292px;padding:11px;background:var(--green);border-radius:34px}
+.phone video{border-radius:24px;width:100%;background:#000}
+.demo-txt{flex:1;min-width:260px}
+.demo-txt h3{font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.35}
+.demo-txt p{margin-top:14px;font-size:16px;color:#3D524B;max-width:36ch}
+.demo-txt a{display:inline-block;margin-top:22px;font-size:14.5px;font-weight:700;
+  border-bottom:2px solid var(--chuldak);padding-bottom:3px}
+
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.shot img{border:1px solid var(--line);border-radius:8px;width:100%}
+.shot figcaption{margin-top:12px;font-size:13px;color:var(--gray);font-weight:500}
+
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;border-top:1px solid var(--line)}
+.feats div{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:15px}
+.feats b{flex:0 0 132px;font-weight:700}
+.feats p{color:#3D524B}
+
+.made p{font-size:15.5px;color:#3D524B;max-width:52ch}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{padding:5px 12px;border:1px solid var(--line);border-radius:100px;font-size:12.5px;color:var(--gray);font-weight:600}
+
+.cta{margin-top:110px;background:var(--green);color:#fff;padding:clamp(44px,6vw,72px);border-radius:4px}
+.cta h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.cta p{margin-top:18px;font-size:17px;color:rgba(255,255,255,.82);max-width:44ch}
+.cta a{display:inline-block;margin-top:32px;padding:16px 34px;background:#fff;color:var(--green);
+  border-radius:3px;font-size:15px;font-weight:800;transition:.18s}
+.cta a:hover{background:var(--mustard)}
+.cta small{display:block;margin-top:16px;font-size:13.5px;color:rgba(255,255,255,.6)}
+
+@media (max-width:1080px){
+  .cards{grid-template-columns:1fr}
+  .card{border-top-width:2px}
+  .shots{grid-template-columns:repeat(2,1fr)}
+  .feats{grid-template-columns:1fr}
+}
+@media (max-width:880px){
+  :root{--sidebar:0px}
+  .sidebar{position:static;width:100%;height:auto;padding:22px 20px;border-right:0;border-bottom:1px solid var(--line)}
+  .nav{margin-top:20px;flex-direction:row;flex-wrap:wrap;gap:8px 20px}
+  .nav a{padding:4px 0}
+  .side-cta{margin-top:20px}
+  .main{margin-left:0;padding:44px 20px 80px}
+  .block{margin-top:68px}
+  .app-icon{width:60px;height:60px;flex-basis:60px;font-size:28px;border-radius:14px}
+  .links{flex-direction:column}
+  .link{align-items:flex-start}
+  .demo{gap:28px}
+  .phone{flex:0 0 100%;max-width:280px;margin:0 auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ═══ 사이드바 (기존 사이트에 이미 있으면 삭제) ═══ -->
+<aside class="sidebar">
+  <a href="/" class="logo">J&amp;I</a>
+  <nav class="nav">
+    <a href="/" class="c-home"><i class="bar"></i>홈</a>
+    <a href="/about.html" class="c-about"><i class="bar"></i>About</a>
+    <a href="/cases.html" class="c-case" aria-current="page"><i class="bar"></i>사례</a>
+    <a href="/service.html" class="c-service"><i class="bar"></i>서비스</a>
+    <a href="/faq.html" class="c-faq"><i class="bar"></i>FAQ</a>
+    <a href="/contact.html" class="c-contact"><i class="bar"></i>연락</a>
+  </nav>
+  <a href="/contact.html" class="side-cta">문의하기</a>
+</aside>
+
+<!-- ═══ 여기부터 포트폴리오 섹션 ═══ -->
+<main class="main">
+
+  <p class="eyebrow">사례 · 자사 제품</p>
+
+  <header class="app-head">
+    <div class="app-icon" aria-hidden="true">출</div>
+    <div>
+      <h1 class="app-title">출딱<small>chuldak</small></h1>
+      <p class="app-sub">직원 출퇴근을 기록하면 급여가 자동으로 계산되는 사장님용 앱</p>
+      <p class="badge"><i class="dot" aria-hidden="true"></i>Google Play 정식 출시 · 운영 중</p>
+    </div>
+  </header>
+
+  <div class="links">
+    <a class="link link-primary" href="https://play.google.com/store/apps/details?id=com.chuldak.twa" target="_blank" rel="noopener">
+      Google Play에서 보기<span>정식 등록된 앱입니다</span>
+    </a>
+    <a class="link link-ghost" href="https://chuldak.com" target="_blank" rel="noopener">
+      chuldak.com<span>공식 사이트</span>
+    </a>
+    <a class="link link-ghost" href="https://chuldak-demo.replit.app" target="_blank" rel="noopener">
+      로그인 없이 둘러보기<span>설치 없이 바로 체험</span>
+    </a>
+  </div>
+
+  <figure class="banner">
+    <img src="images/chuldak-banner.png" alt="출딱 — 보건증 놓쳐서 과태료 맞기 전에" width="1024" height="500">
+    <figcaption>Google Play 등록 대표 이미지</figcaption>
+  </figure>
+
+  <section class="block">
+    <p class="lead">직원 열 명 넘는 매장에서, 매달 반복되던 일 세 가지를 없애려고 만들었습니다.</p>
+    <p class="lead">만든 사람이 직접 운영하고, 직접 고칩니다.</p>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">없앤 걱정 세 가지</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>급여 계산</h3>
+        <p>시급·연장·야간·주휴수당까지 자동으로 계산합니다. 단시간 근로자 비례 주휴수당도 <em>1원 단위</em>로. 노무사 상담 결과와 계산이 일치하는 것을 확인했습니다.</p>
+      </article>
+      <article class="card">
+        <h3>보건증 만료</h3>
+        <p>만료 <em>30일 전·7일 전·당일</em>에 알려드립니다. 하루만 놓쳐도 영업주 과태료 30~50만원. 이제 놓칠 일이 없습니다.</p>
+      </article>
+      <article class="card">
+        <h3>세무사·노무사 자료</h3>
+        <p>정산 내역을 <em>버튼 하나</em>로 이메일 전송합니다. 매달 엑셀로 정리하던 시간이 사라집니다.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">움직이는 화면</h2>
+    <div class="demo">
+      <div class="phone">
+        <video controls muted playsinline preload="none"
+               poster="images/chuldak-demo-poster.jpg"
+               width="640" height="1386">
+          <source src="images/chuldak-demo.mp4" type="video/mp4">
+          이 브라우저는 영상을 지원하지 않습니다.
+        </video>
+      </div>
+      <div class="demo-txt">
+        <h3>출근 등록부터<br>정산 전송까지, 1분</h3>
+        <p>직원이 시간을 넣으면 급여가 바로 계산되고, 사장님 화면에서 정산 내역을 그대로 내보냅니다. 실제 앱을 녹화한 화면입니다.</p>
+        <a href="https://chuldak-demo.replit.app" target="_blank" rel="noopener">직접 둘러보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">화면</h2>
+    <div class="shots">
+      <figure class="shot">
+        <img src="images/chuldak-01.png" alt="출딱 관리자 홈 화면 — 오늘 출퇴근 등록과 보건증 정상 표시" width="720" height="1418" loading="lazy">
+        <figcaption>관리자 홈 · 출퇴근 등록</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/chuldak-02.png" alt="출딱 오늘 출근 현황 화면 — 직원별 출근 상태 목록" width="720" height="1418" loading="lazy">
+        <figcaption>오늘 출근 현황 · 직원별</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/chuldak-03.png" alt="출딱 보건증 관리 화면 — 직원별 만료일과 만료 임박 경고" width="720" height="1418" loading="lazy">
+        <figcaption>보건증 관리 · 만료 임박 경고</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/chuldak-04.png" alt="출딱 세무사·노무사 즉시 발송 화면 — 엑셀·PDF 이메일 전송" width="720" height="1418" loading="lazy">
+        <figcaption>세무사·노무사 즉시 발송</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-title">그 외에 되는 것</h2>
+    <div class="feats">
+      <div><b>다점포 관리</b><p>매장별 데이터를 완전히 분리하고, 한 계정에서 전환합니다</p></div>
+      <div><b>외국인 직원</b><p>한국어 · 영어 · 베트남어 · 중국어 화면을 지원합니다</p></div>
+      <div><b>근로유형 3종</b><p>시급제 · 월급제 · 외국인을 각각 다르게 처리합니다</p></div>
+      <div><b>양방향 지급 확인</b><p>지급완료와 수령확인을 함께 남겨 임금 분쟁에 대비합니다</p></div>
+      <div><b>외주업체 인건비</b><p>직원 급여와 분리해 따로 관리합니다</p></div>
+    </div>
+  </section>
+
+  <section class="block made">
+    <h2 class="block-title">만든 방식</h2>
+    <p>설치 없이 쓰는 웹앱으로 만들고, Google Play에도 정식 등록했습니다. 매장별로 데이터가 완전히 분리되는 구조입니다.<br>개발 · 운영: 주식회사 제이앤아이</p>
+    <div class="chips">
+      <span class="chip">PWA</span><span class="chip">React + Vite</span>
+      <span class="chip">Node.js + Express</span><span class="chip">Google Play TWA</span>
+      <span class="chip">멀티테넌시</span>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>우리 매장에도<br>이런 게 필요하다면</h2>
+    <p>정해진 틀을 팔지 않습니다. 현장을 직접 보고, 그 매장에 맞게 만들어 드립니다.</p>
+    <a href="mailto:geenypak13@gmail.com?subject=출딱%20문의">문의하기</a>
+    <small>geenypak13@gmail.com · 경기도 양평 · 화상으로 전국 상담</small>
+  </section>
+
+</main>
+<!-- ═══ 섹션 끝 ═══ -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"출딱 (chuldak)",
+  "alternateName":"chuldak",
+  "applicationCategory":"BusinessApplication",
+  "operatingSystem":"Android, Web",
+  "url":"https://chuldak.com",
+  "downloadUrl":"https://play.google.com/store/apps/details?id=com.chuldak.twa",
+  "description":"직원 출퇴근을 기록하면 급여가 자동으로 계산되는 사장님용 앱. 주휴수당 자동 계산, 보건증 만료 알림, 세무사 자료 원클릭 전송.",
+  "featureList":["주휴수당 자동 계산","보건증 만료 알림","세무사 자료 원클릭 전송","다점포 관리","다국어 지원"],
+  "author":{
+    "@type":"Organization",
+    "name":"제이앤아이",
+    "alternateName":"J&I (JandI)",
+    "legalName":"J&I Co., Ltd.",
+    "url":"https://jandi.kr",
+    "email":"hello@jandi.kr",
+    "address":{"@type":"PostalAddress","addressRegion":"경기도","addressLocality":"양평군","addressCountry":"KR"}
+  }
+}
+</script>
+
+</body>
+</html>
