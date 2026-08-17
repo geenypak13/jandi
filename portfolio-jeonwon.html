@@ -25,7 +25,7 @@ body{
   background:#fff;color:var(--green);line-height:1.65;-webkit-font-smoothing:antialiased;
 }
 a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 :focus-visible{outline:2px solid var(--jw);outline-offset:3px}
 
 /* ── 사이드바 ── */
@@ -51,7 +51,7 @@ img{display:block;max-width:100%}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--magenta)}
 
 /* ── 히어로 ── */
-.hero{display:grid;grid-template-columns:1fr 320px;gap:44px;align-items:start}
+.hero{display:block}
 .h-id{display:flex;align-items:center;gap:14px}
 .h-icon{width:48px;height:48px;flex:0 0 48px;border-radius:12px;background:var(--jw);
   color:#fff;display:grid;place-items:center;font-size:22px;font-weight:800}
@@ -71,8 +71,9 @@ img{display:block;max-width:100%}
 .lk-main:hover{background:#3C6E39;border-color:#3C6E39}
 .lk-out:hover{background:var(--green);color:#fff}
 .lk-out:hover s{color:rgba(255,255,255,.7)}
-.hero-shot img{border:1px solid var(--line);border-radius:8px}
-.hero-shot figcaption{margin-top:9px;font-size:11.5px;color:var(--gray)}
+.hero-shot{margin-top:34px;max-width:720px}
+.hero-shot img{border:1px solid var(--line);border-radius:8px;width:100%}
+.hero-shot figcaption{margin-top:10px;font-size:13px;color:var(--gray)}
 
 /* ── 섹션 ── */
 .sec{margin-top:64px}
@@ -87,10 +88,10 @@ img{display:block;max-width:100%}
 .card p{font-size:14px;color:#3D524B;line-height:1.7}
 .card em{font-style:normal;font-weight:700;color:#31662E}
 
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:720px}
+.shots{display:grid;grid-template-columns:1fr;gap:30px;max-width:720px}
 .shot .fr{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
 .shot .fr img{width:100%;height:auto}
-.shot figcaption{margin-top:10px;font-size:12.5px;color:var(--gray);font-weight:500}
+.shot figcaption{margin-top:10px;font-size:13px;color:var(--gray);font-weight:500}
 
 .feats{border-top:1px solid var(--line)}
 .feats div{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -114,7 +115,6 @@ img{display:block;max-width:100%}
 .cta small{display:block;margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.6)}
 
 @media (max-width:1080px){
-  .hero{grid-template-columns:1fr;gap:30px}
   .cards{grid-template-columns:1fr;gap:18px}
 }
 @media (max-width:860px){
@@ -126,7 +126,7 @@ img{display:block;max-width:100%}
   .main{margin-left:0;padding:32px 20px 60px}
   .sec{margin-top:52px}
   .h-name{font-size:27px}
-  .shots{grid-template-columns:1fr;max-width:100%}
+  .shots{max-width:100%}
   .cta{padding:32px}
   .cta h2{font-size:23px}
   .feats b{flex:0 0 112px}
