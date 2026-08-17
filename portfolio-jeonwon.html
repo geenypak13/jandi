@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전원집사 — 예약·상담 채널을 하나로 묶은 홈케어 브랜드 | 제이앤아이 사례</title>
+<meta name="description" content="경기도 양평 제이앤아이(J&amp;I)가 기획·제작·운영하는 로컬 홈케어 브랜드 '전원집사'. 웹사이트를 기준점으로 네이버 예약·플레이스·톡톡·당근을 하나로 묶었습니다.">
+<link rel="canonical" href="https://jandi.kr/portfolio-jeonwon.html">
+<meta property="og:title" content="전원집사 — 예약·상담 채널을 하나로 묶은 홈케어 브랜드">
+<meta property="og:description" content="전화 없이 예약이 끝나는 구조. 제이앤아이가 직접 만들고 직접 운영합니다.">
+<meta property="og:image" content="https://jandi.kr/images/jw-01.png">
+
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+
+<style>
+:root{
+  --white:#FFFFFF; --green:#14342B; --coral:#F0573D; --magenta:#D63384;
+  --purple:#7A3FA0; --turquoise:#1FA89A; --mustard:#E8B53D;
+  --jw:#4E8B4A; --jw-soft:#EFF5EC;
+  --gray:#6B7A74; --line:#E6EAE8; --sidebar:240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;
+  background:#fff;color:var(--green);line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--jw);outline-offset:3px}
+
+/* ── 사이드바 ── */
+.sidebar{position:fixed;inset:0 auto 0 0;width:var(--sidebar);padding:36px 28px;
+  display:flex;flex-direction:column;border-right:1px solid var(--line);background:#fff}
+.logo{font-size:23px;font-weight:800;letter-spacing:.06em}
+.nav{margin-top:44px;display:flex;flex-direction:column;gap:1px;flex:1}
+.nav a{display:flex;align-items:center;gap:11px;padding:8px 0;font-size:14px;font-weight:500;color:var(--gray)}
+.nav a:hover,.nav a[aria-current=page]{color:var(--green)}
+.nav a[aria-current=page]{font-weight:700}
+.nav i{width:3px;height:14px;border-radius:1px;background:currentColor;flex:0 0 3px}
+.c1 i{color:var(--green)} .c2 i{color:var(--coral)} .c3 i{color:var(--magenta)}
+.c4 i{color:var(--purple)} .c5 i{color:var(--turquoise)} .c6 i{color:var(--mustard)}
+.side-cta{display:block;text-align:center;padding:12px;border:1.5px solid var(--green);
+  border-radius:2px;font-size:13.5px;font-weight:700}
+.side-cta:hover{background:var(--green);color:#fff}
+
+/* ── 본문 ── */
+.main{margin-left:var(--sidebar);padding:52px 48px 88px}
+.wrap{max-width:840px}
+.eyebrow{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700;
+  letter-spacing:.14em;color:var(--magenta);margin-bottom:28px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--magenta)}
+
+/* ── 히어로 ── */
+.hero{display:grid;grid-template-columns:1fr 320px;gap:44px;align-items:start}
+.h-id{display:flex;align-items:center;gap:14px}
+.h-icon{width:48px;height:48px;flex:0 0 48px;border-radius:12px;background:var(--jw);
+  color:#fff;display:grid;place-items:center;font-size:22px;font-weight:800}
+.h-name{font-size:32px;font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.h-name span{font-size:13px;font-weight:600;color:var(--gray);letter-spacing:.04em;margin-left:9px}
+.h-sub{margin-top:16px;font-size:17px;color:#2C4139;max-width:32ch;line-height:1.55}
+.h-badge{display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:5px 12px 5px 10px;
+  border-radius:100px;background:var(--jw-soft);color:#31662E;font-size:12.5px;font-weight:700}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--jw);animation:p 2.2s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.25}}
+.h-links{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+.lk{padding:11px 18px;border-radius:3px;border:1.5px solid var(--green);
+  font-size:13.5px;font-weight:700;line-height:1.3}
+.lk s{display:block;text-decoration:none;font-size:11.5px;font-weight:500;color:var(--gray);margin-top:2px}
+.lk-main{background:var(--jw);border-color:var(--jw);color:#fff}
+.lk-main s{color:rgba(255,255,255,.78)}
+.lk-main:hover{background:#3C6E39;border-color:#3C6E39}
+.lk-out:hover{background:var(--green);color:#fff}
+.lk-out:hover s{color:rgba(255,255,255,.7)}
+.hero-shot img{border:1px solid var(--line);border-radius:8px}
+.hero-shot figcaption{margin-top:9px;font-size:11.5px;color:var(--gray)}
+
+/* ── 섹션 ── */
+.sec{margin-top:64px}
+.sec > h2{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--gray);
+  padding-left:12px;border-left:3px solid var(--jw);margin-bottom:24px}
+.intro{font-size:19px;font-weight:600;line-height:1.6;letter-spacing:-.02em;max-width:34ch}
+.intro + p{margin-top:10px;font-size:15.5px;color:#3D524B;font-weight:400}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border-top:3px solid var(--jw);padding-top:18px}
+.card h3{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:9px}
+.card p{font-size:14px;color:#3D524B;line-height:1.7}
+.card em{font-style:normal;font-weight:700;color:#31662E}
+
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:720px}
+.shot .fr{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.shot .fr img{width:100%;height:auto}
+.shot figcaption{margin-top:10px;font-size:12.5px;color:var(--gray);font-weight:500}
+
+.feats{border-top:1px solid var(--line)}
+.feats div{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.feats b{flex:0 0 148px;font-weight:700}
+.feats p{color:#3D524B}
+
+.made p{font-size:14.5px;color:#3D524B;max-width:54ch}
+.swatches{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.sw{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--gray);font-weight:600}
+.sw i{width:16px;height:16px;border-radius:4px;display:block}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+.chip{padding:4px 11px;border:1px solid var(--line);border-radius:100px;
+  font-size:12px;color:var(--gray);font-weight:600}
+
+.cta{margin-top:72px;background:var(--green);color:#fff;padding:44px;border-radius:4px;max-width:840px}
+.cta h2{font-size:27px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.cta p{margin-top:14px;font-size:15.5px;color:rgba(255,255,255,.82);max-width:42ch}
+.cta a{display:inline-block;margin-top:26px;padding:14px 30px;background:#fff;color:var(--green);
+  border-radius:3px;font-size:14px;font-weight:800}
+.cta a:hover{background:var(--mustard)}
+.cta small{display:block;margin-top:14px;font-size:12.5px;color:rgba(255,255,255,.6)}
+
+@media (max-width:1080px){
+  .hero{grid-template-columns:1fr;gap:30px}
+  .cards{grid-template-columns:1fr;gap:18px}
+}
+@media (max-width:860px){
+  :root{--sidebar:0px}
+  .sidebar{position:static;width:100%;padding:18px 20px;border-right:0;border-bottom:1px solid var(--line)}
+  .nav{margin-top:16px;flex-direction:row;flex-wrap:wrap;gap:6px 18px;flex:none}
+  .nav a{padding:3px 0}
+  .side-cta{margin-top:16px}
+  .main{margin-left:0;padding:32px 20px 60px}
+  .sec{margin-top:52px}
+  .h-name{font-size:27px}
+  .shots{grid-template-columns:1fr;max-width:100%}
+  .cta{padding:32px}
+  .cta h2{font-size:23px}
+  .feats b{flex:0 0 112px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <a href="/" class="logo">J&amp;I</a>
+  <nav class="nav">
+    <a href="/" class="c1"><i></i>홈</a>
+    <a href="/about.html" class="c2"><i></i>About</a>
+    <a href="/cases.html" class="c3" aria-current="page"><i></i>사례</a>
+    <a href="/services.html" class="c4"><i></i>서비스</a>
+    <a href="/faq.html" class="c5"><i></i>FAQ</a>
+    <a href="/contact.html" class="c6"><i></i>연락</a>
+  </nav>
+  <a href="/contact.html" class="side-cta">문의하기</a>
+</aside>
+
+<main class="main"><div class="wrap">
+
+  <p class="eyebrow">사례 · 자사 프로젝트</p>
+
+  <!-- 히어로 -->
+  <section class="hero">
+    <div>
+      <div class="h-id">
+        <div class="h-icon" aria-hidden="true">집</div>
+        <h1 class="h-name">전원집사<span>JEONWON JIPSA</span></h1>
+      </div>
+
+      <p class="h-sub">흩어져 있던 예약·상담 채널을<br>웹사이트 하나로 묶은 로컬 홈케어 브랜드</p>
+
+      <p class="h-badge"><i class="dot" aria-hidden="true"></i>운영 중 · 실제 예약 접수 중</p>
+
+      <div class="h-links">
+        <a class="lk lk-main" href="https://xn--vf4b95in0az4c.com/" target="_blank" rel="noopener">
+          전원집사.com<s>운영 중인 사이트</s>
+        </a>
+        <a class="lk lk-out" href="https://booking.naver.com/booking/5/bizes/1621870" target="_blank" rel="noopener">
+          네이버 예약<s>결제까지 연동</s>
+        </a>
+      </div>
+    </div>
+
+    <figure class="hero-shot">
+      <img src="images/jw-01.png" alt="전원집사 웹사이트 첫 화면" width="1400" height="749">
+      <figcaption>첫 화면 · 예약 버튼이 바로 보이는 구조</figcaption>
+    </figure>
+  </section>
+
+  <!-- 배경 -->
+  <section class="sec">
+    <p class="intro">기획부터 제작, 운영까지 제이앤아이가 직접 하는 자사 서비스입니다.</p>
+    <p>내 사업의 도구를 내가 만들어 씁니다. 사장님 도구도 그렇게 만듭니다.</p>
+  </section>
+
+  <!-- 없앤 걱정 -->
+  <section class="sec">
+    <h2>없앤 걱정 세 가지</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>전화 폭주</h3>
+        <p>서비스 설명·가격·지역을 매번 전화로 반복하면 하루가 사라집니다. 상세페이지에 전부 적어두고 예약은 네이버 예약으로 넘겼습니다. <em>전화 없이</em> 날짜 선택부터 결제까지 끝납니다.</p>
+      </article>
+      <article class="card">
+        <h3>채널 흩어짐</h3>
+        <p>웹·플레이스·톡톡·당근에 정보가 제각각이면 고객도 헷갈리고 고칠 곳도 네 군데입니다. 웹사이트를 기준점으로 두고 나머지를 링크로 묶었습니다. 이제 <em>브랜드명만 검색해도</em> 함께 뜹니다.</p>
+      </article>
+      <article class="card">
+        <h3>수정 대기</h3>
+        <p>업체에 맡기면 문구 하나 고치는 데 며칠, 그리고 비용. 단순한 구조로 만들어 <em>대표가 그날 바로</em> 고칩니다.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 화면 -->
+  <section class="sec">
+    <h2>화면</h2>
+    <div class="shots">
+      <figure class="shot">
+        <div class="fr"><img src="images/jw-02.png" alt="전원집사 서비스 4종 카드" loading="lazy"></div>
+        <figcaption>서비스 4종 · 색으로 구분한 카드</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="fr"><img src="images/jw-03.png" alt="전원집사 진행 방식 4단계" loading="lazy"></div>
+        <figcaption>진행 방식 · 예약부터 작업까지 4단계</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="fr"><img src="images/jw-04.png" alt="전원집사 예약·문의 화면" loading="lazy"></div>
+        <figcaption>예약·문의 · 지역별 안내와 예약 버튼</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="fr"><img src="images/jw-01.png" alt="전원집사 첫 화면" loading="lazy"></div>
+        <figcaption>첫 화면 · 브랜드 메시지와 예약 동선</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 그 외 -->
+  <section class="sec">
+    <h2>그 외에 되는 것</h2>
+    <div class="feats">
+      <div><b>네이버 예약 연동</b><p>상품 4종 등록 · 버튼 클릭에서 날짜 선택, 결제까지 이탈 없이 이어집니다</p></div>
+      <div><b>네이버 플레이스</b><p>예약 · 길찾기 · 공유 · 전화 · 문의 5버튼과 스마트콜을 연결했습니다</p></div>
+      <div><b>톡톡 상담 요청서</b><p>문의 내용을 양식으로 받아 통화 없이 정리됩니다</p></div>
+      <div><b>당근 비즈프로필</b><p>지역 검색으로 들어오는 손님을 받고 단골로 이어집니다</p></div>
+      <div><b>서비스별 상세페이지</b><p>카드를 누르면 전용 페이지로 · 서비스마다 다른 색을 씁니다</p></div>
+      <div><b>모바일 우선 설계</b><p>손님 대부분이 폰으로 들어옵니다. 폰 기준으로 만들고 PC를 맞췄습니다</p></div>
+    </div>
+  </section>
+
+  <!-- 만든 방식 -->
+  <section class="sec made">
+    <h2>만든 방식</h2>
+    <p>메인 1개와 서비스별 상세 4개, 모두 5개 화면으로 만들었습니다. 무거운 도구 없이 가볍게 짜서 대표가 직접 고칠 수 있는 구조입니다.<br>기획 · 제작 · 운영: 주식회사 제이앤아이</p>
+    <div class="swatches">
+      <span class="sw"><i style="background:#3a7ca5"></i>냉장고 비움</span>
+      <span class="sw"><i style="background:#d16b5a"></i>청소 서비스</span>
+      <span class="sw"><i style="background:#7a63a8"></i>비움 프로젝트</span>
+      <span class="sw"><i style="background:#a8536f"></i>건물집사</span>
+    </div>
+    <div class="chips">
+      <span class="chip">HTML · CSS</span><span class="chip">단일 파일 구조</span>
+      <span class="chip">네이버 예약 연동</span><span class="chip">모바일 우선</span>
+      <span class="chip">AI 이미지 활용</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>우리 가게도<br>이렇게 정리하고 싶다면</h2>
+    <p>사이트만 만들고 끝내지 않습니다. 예약과 상담이 실제로 들어오는 데까지 같이 봐드립니다.</p>
+    <a href="mailto:geenypak13@gmail.com?subject=홈페이지%20제작%20문의">문의하기</a>
+    <small>geenypak13@gmail.com · 경기도 양평 · 화상으로 전국 상담</small>
+  </section>
+
+</div></main>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CreativeWork",
+  "name":"전원집사 (Jeonwon Jipsa)",
+  "url":"https://xn--vf4b95in0az4c.com/",
+  "description":"흩어져 있던 예약·상담 채널을 웹사이트 하나로 묶은 로컬 홈케어 브랜드. 제이앤아이가 기획·제작·운영합니다.",
+  "creator":{
+    "@type":"Organization",
+    "name":"제이앤아이",
+    "alternateName":"J&I (JandI)",
+    "legalName":"J&I Co., Ltd.",
+    "url":"https://jandi.kr",
+    "email":"hello@jandi.kr",
+    "address":{"@type":"PostalAddress","addressRegion":"경기도","addressLocality":"양평군","addressCountry":"KR"}
+  }
+}
+</script>
+</body>
+</html>
